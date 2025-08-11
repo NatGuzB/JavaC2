@@ -1,0 +1,41 @@
+package claseLun;
+import java.util.Scanner;
+import java.time.Year;
+
+//Pedir e imprimir datos: ACTIVIDAD 2.
+public class PerfilUs {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir datos
+        System.out.print("Ingrese su nombre: ");
+        String nombreUsuario = scanner.nextLine();
+
+        System.out.print("Ingrese su edad: ");
+        int edadUsuario = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Ingrese su nacionalidad: ");
+        String nacionalidadUsuario = scanner.nextLine();
+
+        System.out.print("Ingrese su ocupación: ");
+        String ocupacionUsuario = scanner.nextLine();
+
+        System.out.print("Ingrese su salario mensual: ");
+        double salarioMensual = scanner.nextDouble();
+
+        // Calcular el año de nacimiento
+        int anioActual = Year.now().getValue();
+        int anioNacimiento = anioActual - edadUsuario;
+
+        // Mostrar información
+        System.out.println("Nombre: " + nombreUsuario);
+        System.out.println("Edad: " + edadUsuario);
+        System.out.println("Año de nacimiento: " + anioNacimiento);
+        System.out.println("Nacionalidad: " + nacionalidadUsuario);
+        System.out.println("Ocupación: " + ocupacionUsuario);
+        System.out.println("Salario mensual: " + salarioMensual);
+
+        scanner.close();
+    }
+}
