@@ -1,0 +1,27 @@
+package claseLun;
+import java.util.Scanner;
+
+
+//Promedio de 3 calificaciones: ACTIVIDAD 1.
+
+public class PromCal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir calificacion
+        System.out.print("Ingrese la primera calificación: ");
+        int cal1 = scanner.nextInt();
+
+        System.out.print("Ingrese la segunda calificación: ");
+        int cal2 = scanner.nextInt();
+
+        System.out.print("Ingrese la tercera calificación: ");
+        int cal3 = scanner.nextInt();
+
+        // Promedio
+        double prom = (cal1 + cal2 + cal3) / 3.0;
+
+        System.out.println("El promedio de las calificaciones es: " + prom);
+        scanner.close();
+    }
+}
